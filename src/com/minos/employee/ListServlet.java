@@ -17,6 +17,7 @@ public class ListServlet extends HttpServlet {
         ServletContext context = req.getServletContext();
         if (context.getAttribute("employee") == null) {
             List list = new ArrayList();
+
             list.add(new Employee(7731, "刘志明", "市场部", "客户代表", 10000f));
             list.add(new Employee(8871, "张倩", "研发部", "运维工程师", 8000f));
             context.setAttribute("employees", list);
