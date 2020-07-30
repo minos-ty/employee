@@ -25,6 +25,7 @@ public class CreateServlet extends HttpServlet {
         ServletContext context = req.getServletContext();
         List employees =(List) context.getAttribute("employees");
         employees.add(emp);
+        
         context.setAttribute("employees",employees);
         req.getRequestDispatcher("/employee.jsp").forward(req,resp);
 
